@@ -6779,6 +6779,10 @@ let
 
   postgresql = postgresql92;
 
+  postgresql82 = callPackage ../servers/sql/postgresql/8.2.x.nix {
+		stdenv = overrideGCC stdenv gcc46;
+  };
+
   postgresql84 = callPackage ../servers/sql/postgresql/8.4.x.nix { };
 
   postgresql90 = callPackage ../servers/sql/postgresql/9.0.x.nix { };
