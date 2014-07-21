@@ -116,7 +116,7 @@ in
       wantedBy = [ "timers.target" ];
       timerConfig = {
         OnBootSec = "3min";
-        OnUnitInactiveSec = "1min";
+        OnUnitInactiveSec = "3min";
         Unit = "autodeploy.service";
       };
     };
