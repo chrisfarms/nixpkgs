@@ -143,7 +143,6 @@ in
         export PATH="/run/current-system/sw/bin/:$PATH"
         export HOME="/root"
         ${pkgs.autod}/bin/autod -c ${conf} -s /var/autod -o /etc/nixos/containers.nix
-        echo "DEPLOYMENT COMPLETE"
         '';
       serviceConfig = {
         Type = "oneshot";
