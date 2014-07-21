@@ -80,6 +80,16 @@ in
         '';
     };
 
+    services.autodeploy.poll = mkOption {
+      type = types.str;
+      default = "1min";
+      description = 
+        ''
+        Set the time period for polling application repositories
+        for changes.
+        '';
+    };
+
     services.autodeploy.extraConfig = mkOption {
       default = {};
       description = 
@@ -115,8 +125,8 @@ in
       description = "timer that triggers autodeployment";
       wantedBy = [ "timers.target" ];
       timerConfig = {
-        OnBootSec = "3min";
-        OnUnitInactiveSec = "3min";
+        OnBootSec = "5min";
+        OnUnitInactiveSec = cfg.poll;
         Unit = "autodeploy.service";
       };
     };
