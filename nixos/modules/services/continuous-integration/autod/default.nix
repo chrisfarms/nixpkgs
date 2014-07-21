@@ -140,7 +140,7 @@ in
       };
       script = 
         ''
-        export PATH="/run/current-system/sw/bin/:$PATH"
+        export PATH="/run/current-system/sw/bin/:/run/current-system/sw/sbin/:$PATH"
         export HOME="/root"
         ${pkgs.autod}/bin/autod -c ${conf} -s /var/autod -o /etc/nixos/containers.nix
         '';
