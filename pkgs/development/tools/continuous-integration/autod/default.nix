@@ -8,8 +8,8 @@ stdenv.mkDerivation rec {
 
   src = fetchgit {
     url = "https://bitbucket.org/oxdi/autod.git";
-    rev = "1a61229c5b9bd07edbb7901f8732f76ebc2f0c57";
-    sha256 = "329958d69f3898e31ffaa90b8d3a61f836f3e4512222650b4c844c06b88fe378";
+    rev = "e37c0c33d087c4781f6dd63aaa4030d22fb678d6";
+    sha256 = "e806f86f4f74d744d5bd15811535555c1d2456d363ae3dc7188c742b769b23ff";
   };
 
   buildInputs = [ go ];
