@@ -3960,6 +3960,8 @@ let
 
   jenkins = callPackage ../development/tools/continuous-integration/jenkins { };
 
+  autod = callPackage ../development/tools/continuous-integration/autod { };
+
   lcov = callPackage ../development/tools/analysis/lcov { };
 
   leiningen = callPackage ../development/tools/build-managers/leiningen { };
