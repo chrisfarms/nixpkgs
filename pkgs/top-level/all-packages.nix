@@ -6603,6 +6603,8 @@ let
 
   bird = callPackage ../servers/bird { };
 
+  cyclerack = callPackage ../servers/http/cycle-rack { };
+
   couchdb = callPackage ../servers/http/couchdb {
     spidermonkey = spidermonkey_185;
     python = python27;

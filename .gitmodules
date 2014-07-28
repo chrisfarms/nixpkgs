@@ -1,0 +1,3 @@
+[submodule "sources/cycle-rack"]
+	path = sources/cycle-rack
+	url = git@bitbucket.org:oxdi/cycle-rack.git
