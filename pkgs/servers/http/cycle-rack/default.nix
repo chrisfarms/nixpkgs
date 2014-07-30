@@ -12,8 +12,8 @@ let
   };
   go-monkey = fetchgit {
     url = "https://github.com/chrisfarms/monkey";
-    rev = "818b8caec8570c1c32ba241f7574badc46aa9793";
-    sha256 = "137c2fcf6e0d391536173deb3b8f12bb159313c4e99c4842898f888484773ccf";
+    rev = "c02ea103ce9c6e0b031ec0507a7be73b55c0f004";
+    sha256 = "5bb2c10beb52088ef8c252d82e1b581f7a6f984791baf99d90a719e4abcb8015";
   };
   go-pq = fetchgit {
     url = "https://github.com/lib/pq";
@@ -26,8 +26,8 @@ let
     sha256 = "0daa6701fbe51ca765d166a6e99fc3c3a1893f8451e27032b7dfd89d804e2902";
   };
 in stdenv.mkDerivation rec {
-  version = "2.0.0";
-  name = "cyclerack";
+  version = "2.0.1";
+  name = "cyclerack-${version}";
   
   src = ../../../../sources/cycle-rack;
 
@@ -54,6 +54,7 @@ in stdenv.mkDerivation rec {
 
   installPhase = ''
     ensureDir $out/bin
+    rm -f bin/server
     make
     cp bin/server $out/bin/cycle-rack
   '';
