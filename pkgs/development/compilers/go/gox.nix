@@ -40,7 +40,11 @@ stdenv.mkDerivation rec {
   propagatedBuildInputs = [ go ];
 
   installPhase = ''
+<<<<<<< HEAD
     ensureDir $out/bin
+=======
+    mkdir -p $out/bin
+>>>>>>> master
     export GOPATH=$src
     go build -v -o $out/bin/gox github.com/mitchellh/gox
   '';

@@ -69,7 +69,11 @@ stdenv.mkDerivation {
     # http://lists.science.uu.nl/pipermail/nix-dev/2013-October/011891.html
     # Fix for "libgcc_s.so.1 must be installed for pthread_cancel to work"
     # during tests:
+<<<<<<< HEAD
     export LD_LIBRARY_PATH="$(dirname $(echo ${stdenv.gcc.gcc}/lib*/libgcc_s.so))"
+=======
+    export LD_LIBRARY_PATH="$(dirname $(echo ${stdenv.gcc.gcc}/lib/libgcc_s.so))"
+>>>>>>> master
 
     mkdir -p "$out/bin"
     export GOROOT="$(pwd)/"
